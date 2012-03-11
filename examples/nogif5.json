@@ -1,0 +1,9 @@
+{
+	"preload": "auto",
+	"fps": 1,
+	"sequence": [
+		"images/nogif2-001.png",
+		{"src": "images/nogif2-002.png", "duration": 2000},
+		"images/nogif2-003.png"
+	]
+}

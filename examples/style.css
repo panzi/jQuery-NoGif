@@ -1,0 +1,18 @@
+.nogif-controls {
+	cursor: pointer;
+	position: relative;
+	display: inline-block;
+}
+
+.nogif-progress-bar {
+	position: absolute;
+	left: 5px;
+	right: 5px;
+	bottom: 20px;
+}
+
+.nogif-progress {
+	height: 10px;
+	width: 0px;
+	background-color: #0000ff;
+}

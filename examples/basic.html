@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Basic noGif Example</title>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../lib/jquery.nogif.js"></script>
+<script type="text/javascript">
+// <!--
+$(function () {
+	$("#nogif1").nogif({
+		fps: 10,
+		controls: true,
+		sequence: {
+			pattern: 'images/nogif1-###.png',
+			length: 25
+		}
+	});
+
+	$("#nogif2").nogif({
+		preload: 'queued',
+		controls: true,
+		fps: 1,
+		sequence: [
+			"images/nogif2-001.png",
+			"images/nogif2-002.png",
+			"images/nogif2-003.png"
+		]
+	});
+	
+	$("#nogif3").nogif({
+		preload: 'queued',
+		controls: true,
+		sequence: [
+			{src: "images/nogif3-001.png", duration:  500},
+			{src: "images/nogif3-002.png", duration:  500},
+			{src: "images/nogif3-003.png", duration: 1500},
+			{src: "images/nogif3-004.png", duration:  500}
+		]
+	});
+	
+	$("#nogif4").nogif({
+		preload: 'queued',
+		controls: true,
+		fps: 1,
+		sequence: [
+			"images/nogif2-001.png",
+			"images/nogif2-002.png",
+			"images/nogif2-003.png"
+		]
+	});
+});
+// -->
+</script>
+</head>
+<body>
+
+<p>
+<div id="nogif1"></div>
+</p>
+
+<p>
+<img id="nogif2" src="images/nogif2-placeholder.png"/>
+</p>
+
+<p>
+<div id="nogif3"></div>
+</p>
+
+<p>
+<img id="nogif4" src="images/nogif2-placeholder.png"/>
+</p>
+
+<p>
+<img id="nogif5" class="nogif" data-preload="none" data-src="nogif5.json" data-controls="true" src="images/nogif2-placeholder.png"/>
+</p>
+
+</body>
+</html>
